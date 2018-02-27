@@ -1,6 +1,7 @@
 package com.velykyi.entity.full;
 
 import com.velykyi.entity.Entity;
+import com.velykyi.entity.full.enums.AirPlane;
 import com.velykyi.entity.full.enums.CityDestinations;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -13,7 +14,7 @@ public class Flight implements Entity<Integer>{
     private CityDestinations arrivalPoint;
     private LocalDate departureDate;
     private LocalDate arrivalDate;
-    private Airplane airplane;
+    private AirPlane airplane;
     private Integer price;
     private Boolean baggage;
 
@@ -58,11 +59,11 @@ public class Flight implements Entity<Integer>{
         this.arrivalDate = arrivalDate;
     }
 
-    public Airplane getAirplane() {
+    public AirPlane getAirplane() {
         return airplane;
     }
 
-    public void setAirplane(Airplane airplane) {
+    public void setAirplane(AirPlane airplane) {
         this.airplane = airplane;
     }
 

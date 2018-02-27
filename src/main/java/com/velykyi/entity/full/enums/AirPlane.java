@@ -1,13 +1,12 @@
 package com.velykyi.entity.full.enums;
 
-public enum  AirPlaneModel {
-    BOING(250),
-    AIRBUS(250);
+public enum  AirPlane {
+    BOING_737(150),
+    AIRBUS_320(160);
 
     private final int amountOfSitting;
 
-
-    AirPlaneModel(int amountOfSitting) {
+    AirPlane(int amountOfSitting) {
         this.amountOfSitting = amountOfSitting;
     }
 
