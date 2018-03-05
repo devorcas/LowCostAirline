@@ -1,22 +1,38 @@
 package com.velykyi.entity.full;
 
 import com.velykyi.entity.Entity;
-import com.velykyi.entity.full.enums.AirPlane;
-import com.velykyi.entity.full.enums.CityDestinations;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.io.PrintWriter;
 import java.time.LocalDate;
 
 public class Flight implements Entity<Integer>{
     private Integer id;
-    private CityDestinations departurePoint;
-    private CityDestinations arrivalPoint;
+    private String departurePoint;
+    private String arrivalPoint;
     private LocalDate departureDate;
     private LocalDate arrivalDate;
-    private AirPlane airplane;
+    private String airplane;
     private Integer price;
     private Boolean baggage;
+
+    public String getDeparturePoint() {
+        return departurePoint;
+    }
+
+    public void setDeparturePoint(String departurePoint) {
+        this.departurePoint = departurePoint;
+    }
+
+    public String getArrivalPoint() {
+        return arrivalPoint;
+    }
+
+    public void setArrivalPoint(String arrivalPoint) {
+        this.arrivalPoint = arrivalPoint;
+    }
+
+    public void setAirplane(String airplane) {
+        this.airplane = airplane;
+    }
 
     @Override
     public Integer getId() {
@@ -27,21 +43,6 @@ public class Flight implements Entity<Integer>{
         this.id = id;
     }
 
-    public CityDestinations getDeparturePoint() {
-        return departurePoint;
-    }
-
-    public void setDeparturePoint(CityDestinations departurePoint) {
-        this.departurePoint = departurePoint;
-    }
-
-    public CityDestinations getArrivalPoint() {
-        return arrivalPoint;
-    }
-
-    public void setArrivalPoint(CityDestinations arrivalPoint) {
-        this.arrivalPoint = arrivalPoint;
-    }
 
     public LocalDate getDepartureDate() {
         return departureDate;
@@ -59,12 +60,8 @@ public class Flight implements Entity<Integer>{
         this.arrivalDate = arrivalDate;
     }
 
-    public AirPlane getAirplane() {
+    public String getAirplane() {
         return airplane;
-    }
-
-    public void setAirplane(AirPlane airplane) {
-        this.airplane = airplane;
     }
 
     public Integer getPrice() {

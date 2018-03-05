@@ -6,6 +6,33 @@ public class Ticket implements Entity<Integer>{
     private Integer id;
     private User user;
     private Flight flight;
+    private Boolean baggage;
+    private Boolean priorityRegistrationLanding;
+    private Integer fullPrice;
+
+    public Integer getFullPrice() {
+        return fullPrice;
+    }
+
+    private void setFullPrice(Integer fullPrice) {
+        // TODO calculate price depends on curent date, deparure date , baggege, priorty lending
+    }
+
+    public Boolean getBaggage() {
+        return baggage;
+    }
+
+    public void setBaggage(Boolean baggage) {
+        this.baggage = baggage;
+    }
+
+    public Boolean getPriorityRegistrationLanding() {
+        return priorityRegistrationLanding;
+    }
+
+    public void setPriorityRegistrationLanding(Boolean priorityRegistrationLanding) {
+        this.priorityRegistrationLanding = priorityRegistrationLanding;
+    }
 
     public Integer getId() {
         return id;
