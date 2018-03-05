@@ -15,6 +15,7 @@ public class Ticket implements Entity<Integer>{
     }
 
     private void setFullPrice(Integer fullPrice) {
+        //Better to create util that will be calculate order price (example PriceUtil.calculateTicketPrice(var1, var2, ...))
         // TODO calculate price depends on curent date, deparure date , baggege, priorty lending
     }
 
